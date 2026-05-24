@@ -114,9 +114,22 @@ The best-performing model was **XGBoost Regressor**
 ```text
 Food-Delivery-Time-Prediction/
 │
+├── Code/
+│   ├── food_delivery_app.py
+│   ├── main.py
+│   ├── model_training.py
+│   ├── model1.joblib
+│   └── predict.py
+│
+├── Data/
+│   └── train.csv
+│
+├── img/
+│   └── image.jpeg
+│
 ├── notebook/
-├── App/
-├── models/
+│   └── Food Delivery Time Prediction - Exploratory Data Analysis.ipynb
+│
+├── README.md
 ├── requirements.txt
 ├── runtime.txt
-├── README.md

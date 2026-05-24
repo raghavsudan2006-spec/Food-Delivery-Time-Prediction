@@ -92,25 +92,31 @@ def get_user_input(data):
 st.set_page_config(page_title="Food Delivery Time Prediction", page_icon=None, layout="centered",
                        initial_sidebar_state="auto")
 
+# Displaying text
 st.title("Food Delivery Time Prediction")
 st.divider()
 
+# Reading CSV
 data = pd.read_csv("Data/train.csv")
 
 cleaned_data = main.Cleaning_steps.fit_transform(data)
 
+# Displaying Image
 st.image("img/image.jpeg",width=700)
 
 st.write(""" The food delivery time prediction model is vital in ensuring prompt and accurate delivery in the food delivery industry. Leveraging advanced data cleaning techniques and feature engineering, a robust food delivery time prediction model is developed.
             This model predicts food delivery time based on a range of factors, including order details, location, city, delivery person information, and weather conditions.  
              """)
 
+# Create the slider
 st.sidebar.header("User input parameters")
 
+# Create function from user input
 input_df = get_user_input(cleaned_data)
 
 model = joblib.load("Code/model1.joblib")
 
+# Display Order details
 st.subheader("Order Details")
 
 order_time = datetime.strptime(input_df['Time_Orderd'].iloc[0],"%H:%M:%S").strftime("%I:%M %p")
@@ -119,6 +125,7 @@ st.write(f"**Order was placed on** {order_time}")
 picked_time = datetime.strptime(input_df['Time_Order_picked'].iloc[0],"%H:%M:%S").strftime("%I:%M %p")
 st.write(f"**Order was picked up at** {picked_time}")
 
+# Display Predictions
 st.subheader('Prediction')
 
 

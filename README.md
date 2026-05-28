@@ -30,7 +30,7 @@ The dataset contains important information such as:
 
 ## **Live Demo**
 
-Web App Link: https://food-delivery-time-prediction-zpw5cvopdcgfrfujohs3kv.streamlit.app/
+Web App Link: https://food-delivery-time-prediction-yskiuypcot6cck63gwnqjp.streamlit.app/
 
 ---
 
